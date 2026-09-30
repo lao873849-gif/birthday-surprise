@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f6">
+  <meta name="description" content="A little birthday surprise made just for you">
+  <title>My Birthday Surprise 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="floating-hearts" id="hearts"></div>
+
+  <!-- LOVE VAULT -->
+  <section id="vault" class="screen vault-screen">
+    <div class="vault-card">
+      <div class="big-heart">💗</div>
+      <p class="eyebrow">A LITTLE SURPRISE FOR YOU</p>
+      <h1>Hey, My Love!</h1>
+      <p>มีของขวัญเล็ก ๆ รอเธออยู่ข้างในนะ 🎁</p>
+
+      <form id="vaultForm">
+        <label for="birthdayInput">วันเกิดของเธอ 🎂</label>
+        <input
+          id="birthdayInput"
+          type="text"
+          placeholder="เช่น 25/12/2005"
+          autocomplete="off"
+          required
+        >
+        <p class="hint">ใส่วันเกิดในรูปแบบ วัน/เดือน/ปี</p>
+        <button class="primary-btn" type="submit">
+          Open My Heart 💕
+        </button>
+      </form>
+      <p id="vaultMessage" class="message" aria-live="polite"></p>
+      <p class="tiny">Made with love, just for you ♡</p>
+    </div>
+  </section>
+
+  <!-- MAIN WEBSITE -->
+  <main id="mainSite" class="hidden">
+    <header class="topbar">
+      <a class="brand" href="#home">♡ Our Little World</a>
+      <button id="musicToggle" class="music-btn" type="button">
+        ♫ Play Music
+      </button>
+    </header>
+
+    <nav class="nav-links" aria-label="เมนูเว็บไซต์">
+      <a href="#home">Home</a>
+      <a href="#cake">Cake</a>
+      <a href="#memories">Memories</a>
+      <a href="#letter">Letter</a>
+      <a href="#qr">Surprise</a>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="hero section">
+      <span class="pill">♡ HAPPY BIRTHDAY ♡</span>
+      <div class="hero-heart">💗</div>
+      <p class="eyebrow">TODAY IS ALL ABOUT YOU</p>
+      <h1>Happy Birthday,<br><span id="loverName">My Love</span>!</h1>
+      <p class="hero-text">
+        วันนี้เป็นวันพิเศษของคนที่พิเศษที่สุดคนหนึ่งในโลกของฉัน
+        ขอให้รอยยิ้มของเธอสดใสในทุก ๆ วันนะ 🌷
+      </p>
+      <a class="primary-btn link-btn" href="#cake">Let's Celebrate ✨</a>
+      <div class="scroll-note">SCROLL DOWN ♡</div>
+    </section>
+
+    <!-- CAKE -->
+    <section id="cake" class="section">
+      <p class="eyebrow">MAKE A WISH</p>
+      <h2>A Cake Just for You 🎂</h2>
+      <p class="section-desc">ตั้งจิตอธิษฐาน แล้วกดปุ่มด้านล่างเลยนะ</p>
+
+      <div class="cake-area">
+        <div class="cake" id="cakeEmoji" role="img"
+             aria-label="เค้กวันเกิด">🎂</div>
+        <div class="candles" id="candles">🕯️ 🕯️ 🕯️</div>
+        <p id="wishMessage" class="wish-message">
+          ขอให้ปีนี้เต็มไปด้วยความสุข 💕
+        </p>
+        <button id="wishBtn" class="primary-btn" type="button">
+          Blow the Candles ✨
+        </button>
+        <button id="confettiBtn" class="secondary-btn" type="button">
+          More Magic 💫
+        </button>
+      </div>
+    </section>
+
+    <!-- MEMORIES -->
+    <section id="memories" class="section soft-section">
+      <p class="eyebrow">LITTLE MOMENTS, BIG MEMORIES</p>
+      <h2>Our Little Memories 📸</h2>
+      <p class="section-desc">
+        ทุกภาพมีเรื่องราว และทุกเรื่องราวมีความหมาย
+      </p>
+
+      <div class="photo-grid">
+        <article class="photo-card">
+          <img src="images/image.png" alt="ความทรงจำรูปที่หนึ่ง"
+               loading="lazy">
+          <p>Our first favorite memory ♡</p>
+        </article>
+        <article class="photo-card">
+          <img src="images/image1.png" alt="ความทรงจำรูปที่สอง"
+               loading="lazy">
+          <p>A little moment, a big smile 🌷</p>
+        </article>
+        <article class="photo-card">
+          <img src="images/WhatsApp Image 2026-09-30 at 23.38.45.jpeg" alt="ความทรงจำรูปที่สาม"
+               loading="lazy">
+          <p>One of my favorite days ✨</p>
+        </article>
+      </div>
+      <p class="hint"></p>
+    </section>
+
+    <!-- LOVE LETTER -->
+    <section id="letter" class="section">
+      <p class="eyebrow">SOMETHING FROM MY HEART</p>
+      <h2>A Letter for You 💌</h2>
+
+      <div class="letter-envelope">
+        <div class="envelope-icon">💌</div>
+        <p>มีข้อความหนึ่งอยากให้เธออ่าน...</p>
+        <button id="letterBtn" class="primary-btn" type="button">
+          Open My Letter
+        </button>
+        <div id="letterContent" class="letter-content hidden">
+          <h3>To My Favorite Person ♡</h3>
+          <p id="letterText">
+            สุขสันต์วันเกิดนะคนเก่ง 💗
+
+            ขอบคุณที่เป็นส่วนหนึ่งของช่วงเวลาดี ๆ
+            ขอให้เธอได้พบเจอแต่สิ่งที่ทำให้ยิ้มได้
+            มีพลังใจในวันที่เหนื่อย และมีคนคอยอยู่ข้าง ๆ
+            ในวันที่ต้องการกำลังใจ
+
+            ขอให้ปีใหม่นี้ของชีวิตเต็มไปด้วยโอกาสดี ๆ
+            ความฝันค่อย ๆ เป็นจริง และมีความสุขในแบบของเธอเอง
+
+            วันนี้และวันต่อ ๆ ไป ขอให้เธอได้รับความรัก
+            และความอบอุ่นมากมายเลยนะ 🌷
+
+            With love, always. ♡
+          </p>
+          <p class="signature">Someone who cares about you ♡</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL SURPRISE -->
+    <section id="qr" class="section final-section">
+      <p class="eyebrow">ONE LAST LITTLE SURPRISE</p>
+      <h2>One More Thing... 💝</h2>
+      <p class="section-desc">
+        ขอบคุณที่เปิดของขวัญชิ้นเล็ก ๆ นี้นะ
+        ขอให้วันนี้เป็นวันที่เธอจดจำด้วยรอยยิ้ม
+      </p>
+
+      <div class="final-heart" id="finalHeart">💖</div>
+      <button id="finalBtn" class="primary-btn" type="button">
+        Send Me Some Love ♡
+      </button>
+      <p id="finalMessage" aria-live="polite"></p>
+
+      <div class="qr-card">
+        <h3>Keep This Little Memory 📱</h3>
+        <p>สแกน QR Code เพื่อเปิดเว็บไซต์นี้อีกครั้ง</p>
+        <img id="qrImage" alt="QR Code สำหรับเปิดเว็บไซต์"
+             width="200" height="200">
+        <p class="hint" id="qrHint"></p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made with ♡, just for you.</p>
+      <p>May your days be filled with little joys 🌷</p>
+    </footer>
+  </main>
+
+  <!--
+    ใส่ไฟล์เพลงที่คุณมีสิทธิ์ใช้งานไว้ที่ audio/soft-piano.mp3
+    ถ้าไม่มีเพลง เว็บไซต์ส่วนอื่นยังทำงานได้ตามปกติ
+  -->
+  <audio id="bgMusic" loop preload="none">
+    <source src="audio/soft-piano.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
