@@ -1,179 +1,159 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fff0f6">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#fff7f1">
   <meta name="description" content="A little birthday surprise made just for you">
-  <title>My Birthday Surprise 💗</title>
+  <title>Our Little World ♡</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="floating-hearts" id="hearts"></div>
+  <div class="floating-hearts" id="hearts" aria-hidden="true"></div>
 
-  <!-- LOVE VAULT -->
+  <!-- =========================================================
+       01. LOVE VAULT — ใส่รหัสให้ถูกก่อนเข้าเว็บ
+       ========================================================= -->
   <section id="vault" class="screen vault-screen">
-    <div class="vault-card">
-      <div class="big-heart">💗</div>
-      <p class="eyebrow">A LITTLE SURPRISE FOR YOU</p>
-      <h1>Hey, My Love!</h1>
-      <p>มีของขวัญเล็ก ๆ รอเธออยู่ข้างในนะ 🎁</p>
+    <div class="vault-page">
+      <p class="eyebrow">A LITTLE SURPRISE, JUST FOR YOU</p>
+      <h1 class="script-title">for you, always.</h1>
+      <h2>มีอะไรบางอย่างซ่อนอยู่<br><span>สำหรับเธอ 💗</span></h2>
+      <p class="vault-subtitle">รหัสคือวันพิเศษของเราสองคน<br><small>ลองนึกถึงวันครบรอบของเรานะ</small></p>
 
-      <form id="vaultForm">
-        <label for="birthdayInput">วันเกิดของเธอ 🎂</label>
-        <input
-          id="birthdayInput"
-          type="text"
-          placeholder="เช่น 25/12/2005"
-          autocomplete="off"
-          required
-        >
-        <p class="hint">ใส่วันเกิดในรูปแบบ วัน/เดือน/ปี</p>
-        <button class="primary-btn" type="submit">
-          Open My Heart 💕
-        </button>
-      </form>
-      <p id="vaultMessage" class="message" aria-live="polite"></p>
-      <p class="tiny">Made with love, just for you ♡</p>
+      <div class="vault-card">
+        <div class="vault-label">LOVE VAULT</div>
+        <div id="codeDisplay" class="code-display" aria-label="รหัสที่กรอก"></div>
+
+        <div class="keypad" aria-label="แป้นตัวเลข">
+          <button type="button" data-key="1">1</button>
+          <button type="button" data-key="2">2</button>
+          <button type="button" data-key="3">3</button>
+          <button type="button" data-key="4">4</button>
+          <button type="button" data-key="5">5</button>
+          <button type="button" data-key="6">6</button>
+          <button type="button" data-key="7">7</button>
+          <button type="button" data-key="8">8</button>
+          <button type="button" data-key="9">9</button>
+          <button type="button" id="backspace" aria-label="ลบ">⌫</button>
+          <button type="button" data-key="0">0</button>
+          <button type="button" id="enter" aria-label="ยืนยัน">✓</button>
+        </div>
+
+        <p id="vaultMessage" class="vault-message" aria-live="polite"></p>
+        <p class="tiny">ใส่รหัส แล้วกด ✓ เพื่อเปิดความรัก ♡</p>
+      </div>
     </div>
   </section>
 
-  <!-- MAIN WEBSITE -->
+  <!-- =========================================================
+       MAIN WEBSITE — เปิดได้หลังใส่รหัสถูกเท่านั้น
+       ========================================================= -->
   <main id="mainSite" class="hidden">
     <header class="topbar">
-      <a class="brand" href="#home">♡ Our Little World</a>
-      <button id="musicToggle" class="music-btn" type="button">
-        ♫ Play Music
-      </button>
+      <a class="brand" href="#cake"><span>♡</span> OUR LITTLE WORLD</a>
+      <button id="musicToggle" class="music-btn" type="button">♫ Play Music</button>
     </header>
 
     <nav class="nav-links" aria-label="เมนูเว็บไซต์">
-      <a href="#home">Home</a>
       <a href="#cake">Cake</a>
-      <a href="#memories">Memories</a>
-      <a href="#letter">Letter</a>
+      <a href="#memories">Mini Game</a>
+      <a href="#letter">A Letter for You</a>
       <a href="#qr">Surprise</a>
     </nav>
 
-    <!-- HOME -->
-    <section id="home" class="hero section">
-      <span class="pill">♡ HAPPY BIRTHDAY ♡</span>
-      <div class="hero-heart">💗</div>
-      <p class="eyebrow">TODAY IS ALL ABOUT YOU</p>
-      <h1>Happy Birthday,<br><span id="loverName">My Love</span>!</h1>
-      <p class="hero-text">
-        วันนี้เป็นวันพิเศษของคนที่พิเศษที่สุดคนหนึ่งในโลกของฉัน
-        ขอให้รอยยิ้มของเธอสดใสในทุก ๆ วันนะ 🌷
-      </p>
-      <a class="primary-btn link-btn" href="#cake">Let's Celebrate ✨</a>
-      <div class="scroll-note">SCROLL DOWN ♡</div>
-    </section>
+    <!-- =====================================================
+         02. CAKE — ปักเทียน 4 เล่มแบบชัด ๆ ไม่ใช้ภาพเบลอ
+         ===================================================== -->
+    <section id="cake" class="section cake-section">
+      <p class="eyebrow">MAKE A LITTLE WISH</p>
+      <h2>เค้กก้อนนี้...เพื่อเธอ 🎂</h2>
+      <p class="section-desc">ช่วยปักเทียนให้ครบ 4 เล่มนะ · <span id="candleCount">0 / 4</span></p>
 
-    <!-- CAKE -->
-    <section id="cake" class="section">
-      <p class="eyebrow">MAKE A WISH</p>
-      <h2>A Cake Just for You 🎂</h2>
-      <p class="section-desc">ตั้งจิตอธิษฐาน แล้วกดปุ่มด้านล่างเลยนะ</p>
+      <div class="cake-stage">
+        <div class="cake-scene" aria-label="เค้กวันเกิด">
+          <div class="cake-plate"></div>
+          <div class="cake-body">
+            <div class="cake-top">
+              <div class="cream cream-a"></div><div class="cream cream-b"></div><div class="cream cream-c"></div>
+              <span class="berry b1">🍓</span><span class="berry b2">🍓</span><span class="berry b3">🍓</span>
+              <span class="berry b4">🍓</span><span class="berry b5">🍓</span>
+            </div>
+            <div class="cake-side">
+              <div class="frosting-drip d1"></div><div class="frosting-drip d2"></div><div class="frosting-drip d3"></div>
+              <div class="rosette r1">✿</div><div class="rosette r2">✿</div><div class="rosette r3">✿</div>
+            </div>
+            <div class="cake-base"></div>
+          </div>
 
-      <div class="cake-area">
-        <div class="cake" id="cakeEmoji" role="img"
-             aria-label="เค้กวันเกิด">🎂</div>
-        <div class="candles" id="candles">🕯️ 🕯️ 🕯️</div>
-        <p id="wishMessage" class="wish-message">
-          ขอให้ปีนี้เต็มไปด้วยความสุข 💕
-        </p>
-        <button id="wishBtn" class="primary-btn" type="button">
-          Blow the Candles ✨
-        </button>
-        <button id="confettiBtn" class="secondary-btn" type="button">
-          More Magic 💫
-        </button>
-      </div>
-    </section>
+          <!-- จุดสำหรับปักเทียน 4 จุด -->
+          <button class="candle-spot spot-1" data-candle="1" type="button" aria-label="ปักเทียนเล่มที่ 1"><span>+</span></button>
+          <button class="candle-spot spot-2" data-candle="2" type="button" aria-label="ปักเทียนเล่มที่ 2"><span>+</span></button>
+          <button class="candle-spot spot-3" data-candle="3" type="button" aria-label="ปักเทียนเล่มที่ 3"><span>+</span></button>
+          <button class="candle-spot spot-4" data-candle="4" type="button" aria-label="ปักเทียนเล่มที่ 4"><span>+</span></button>
 
-    <!-- MEMORIES -->
-    <section id="memories" class="section soft-section">
-      <p class="eyebrow">LITTLE MOMENTS, BIG MEMORIES</p>
-      <h2>Our Little Memories 📸</h2>
-      <p class="section-desc">
-        ทุกภาพมีเรื่องราว และทุกเรื่องราวมีความหมาย
-      </p>
-
-      <div class="photo-grid">
-        <article class="photo-card">
-          <img src="images/image.png" alt="ความทรงจำรูปที่หนึ่ง"
-               loading="lazy">
-          <p>Our first favorite memory ♡</p>
-        </article>
-        <article class="photo-card">
-          <img src="images/image1.png" alt="ความทรงจำรูปที่สอง"
-               loading="lazy">
-          <p>A little moment, a big smile 🌷</p>
-        </article>
-        <article class="photo-card">
-          <img src="images/WhatsApp Image 2026-09-30 at 23.38.45.jpeg" alt="ความทรงจำรูปที่สาม"
-               loading="lazy">
-          <p>One of my favorite days ✨</p>
-        </article>
-      </div>
-      <p class="hint"></p>
-    </section>
-
-    <!-- LOVE LETTER -->
-    <section id="letter" class="section">
-      <p class="eyebrow">SOMETHING FROM MY HEART</p>
-      <h2>A Letter for You 💌</h2>
-
-      <div class="letter-envelope">
-        <div class="envelope-icon">💌</div>
-        <p>มีข้อความหนึ่งอยากให้เธออ่าน...</p>
-        <button id="letterBtn" class="primary-btn" type="button">
-          Open My Letter
-        </button>
-        <div id="letterContent" class="letter-content hidden">
-          <h3>To My Favorite Person ♡</h3>
-          <p id="letterText">
-            สุขสันต์วันเกิดนะคนเก่ง 💗
-
-            ขอบคุณที่เป็นส่วนหนึ่งของช่วงเวลาดี ๆ
-            ขอให้เธอได้พบเจอแต่สิ่งที่ทำให้ยิ้มได้
-            มีพลังใจในวันที่เหนื่อย และมีคนคอยอยู่ข้าง ๆ
-            ในวันที่ต้องการกำลังใจ
-
-            ขอให้ปีใหม่นี้ของชีวิตเต็มไปด้วยโอกาสดี ๆ
-            ความฝันค่อย ๆ เป็นจริง และมีความสุขในแบบของเธอเอง
-
-            วันนี้และวันต่อ ๆ ไป ขอให้เธอได้รับความรัก
-            และความอบอุ่นมากมายเลยนะ 🌷
-
-            With love, always. ♡
-          </p>
-          <p class="signature">Someone who cares about you ♡</p>
+          <div id="placedCandles" class="placed-candles" aria-live="polite"></div>
         </div>
       </div>
+
+      <button id="wishBtn" class="primary-btn" type="button">ปักเทียน 🕯️ <span>0 / 4</span></button>
+      <p id="wishMessage" class="hint">แตะเครื่องหมาย + บนเค้กทีละจุดให้ครบ 4 เล่มนะ 💗</p>
+      <button id="toMemory" class="primary-btn hidden" type="button">ไปเล่น Mini Game จับคู่ ♡</button>
     </section>
 
-    <!-- FINAL SURPRISE -->
+    <!-- =====================================================
+         03. MINI GAME — จับคู่ภาพ 3 คู่
+         ===================================================== -->
+    <section id="memories" class="section soft-section">
+      <p class="eyebrow">TWO HEARTS, ONE MEMORY</p>
+      <h2>จับคู่ความทรงจำของเรา ♡</h2>
+      <p class="section-desc">เปิดรูปทีละ 2 ใบ แล้วหาคู่ให้ครบทั้ง 3 คู่</p>
+
+      <div class="score-pill">♡ <span id="pairsFound">0</span> / 3 คู่</div>
+      <div id="memoryGrid" class="memory-grid" aria-label="เกมจับคู่ความทรงจำ"></div>
+      <p id="memoryHint" class="hint">แตะรูป 2 ใบที่คิดว่าเป็นคู่เดียวกัน</p>
+      <button id="toLetter" class="primary-btn hidden" type="button">เปิดจดหมายจากใจ 💌</button>
+    </section>
+
+    <!-- =====================================================
+         04. A LETTER FOR YOU — คำอวยพร + ภาพประกอบ
+         ===================================================== -->
+    <section id="letter" class="section letter-section">
+      <p class="eyebrow">SEALED WITH ALL MY LOVE</p>
+      <h2>ถึงคนโปรดของฉัน 💗</h2>
+
+      <article class="letter-card">
+        <h3>Happy birthday, my love.</h3>
+        <h4>สุขสันต์วันเกิดนะ คนโปรดของฉัน ♡</h4>
+
+        <div class="polaroids">
+          <figure><img src="images/photo1.jpg" alt="รูปความทรงจำที่ 1"><figcaption>you &amp; me ♡</figcaption></figure>
+          <figure><img src="images/photo2.jpg" alt="รูปความทรงจำที่ 2"><figcaption>our little world</figcaption></figure>
+          <figure><img src="images/photo3.jpg" alt="รูปความทรงจำที่ 3"><figcaption>forever, please</figcaption></figure>
+        </div>
+
+        <p>ขอบคุณที่เข้ามาเป็นความน่ารักในทุก ๆ วัน แค่มีเธออยู่ด้วย วันธรรมดาก็กลายเป็นวันที่อยากจดจำ</p>
+        <p>ในวันเกิดปีนี้ ขอให้เธอได้ยิ้มเยอะ ๆ ได้ทำสิ่งที่ชอบ และมีเรื่องดี ๆ เข้ามาให้หัวใจพองโต ถ้าวันไหนเหนื่อย ก็อยากให้รู้ว่ายังมีฉันอยู่ตรงนี้เสมอนะ</p>
+        <p>ขอให้เราได้มีเรื่องราวด้วยกันอีกหลาย ๆ ปี มีวันธรรมดาที่แสนพิเศษอีกหลาย ๆ วัน และได้ฉลองวันเกิดด้วยกันไปอีกนานเลย 💗</p>
+        <p class="signature">รักเธอมากที่สุดจากหมดหัวใจ ♡</p>
+      </article>
+
+      <button id="letterBtn" class="primary-btn" type="button">ส่งความรักให้อีกครั้ง 💌</button>
+    </section>
+
+    <!-- ORIGINAL FINAL SURPRISE / QR -->
     <section id="qr" class="section final-section">
       <p class="eyebrow">ONE LAST LITTLE SURPRISE</p>
       <h2>One More Thing... 💝</h2>
-      <p class="section-desc">
-        ขอบคุณที่เปิดของขวัญชิ้นเล็ก ๆ นี้นะ
-        ขอให้วันนี้เป็นวันที่เธอจดจำด้วยรอยยิ้ม
-      </p>
-
+      <p class="section-desc">ขอบคุณที่เปิดของขวัญชิ้นเล็ก ๆ นี้นะ ขอให้วันนี้เป็นวันที่เธอจดจำด้วยรอยยิ้ม</p>
       <div class="final-heart" id="finalHeart">💖</div>
-      <button id="finalBtn" class="primary-btn" type="button">
-        Send Me Some Love ♡
-      </button>
+      <button id="finalBtn" class="primary-btn" type="button">Send Me Some Love ♡</button>
       <p id="finalMessage" aria-live="polite"></p>
 
       <div class="qr-card">
         <h3>Keep This Little Memory 📱</h3>
         <p>สแกน QR Code เพื่อเปิดเว็บไซต์นี้อีกครั้ง</p>
-        <img id="qrImage" alt="QR Code สำหรับเปิดเว็บไซต์"
-             width="200" height="200">
+        <img id="qrImage" alt="QR Code สำหรับเปิดเว็บไซต์" width="200" height="200">
         <p class="hint" id="qrHint"></p>
       </div>
     </section>
@@ -184,10 +164,6 @@
     </footer>
   </main>
 
-  <!--
-    ใส่ไฟล์เพลงที่คุณมีสิทธิ์ใช้งานไว้ที่ audio/soft-piano.mp3
-    ถ้าไม่มีเพลง เว็บไซต์ส่วนอื่นยังทำงานได้ตามปกติ
-  -->
   <audio id="bgMusic" loop preload="none">
     <source src="audio/soft-piano.mp3" type="audio/mpeg">
   </audio>
